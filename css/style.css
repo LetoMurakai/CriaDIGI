@@ -19,6 +19,9 @@ body{
     color: var(--off-white);
 }
 
+
+/* Tipografia */
+
 .display-1 {
     font-weight: 800;
     font-size: clamp(1.8em, 1.9em + 3vw, 3.8em);
@@ -28,6 +31,28 @@ body{
     font-weight: 600;
     font-size: clamp(1.8em, 1.9em + 3vw, 3.8em);
 }
+
+small {
+    font-weight: 400;
+    font-size: clamp(0.35em, 0.35em + 2vw, 0.88em);
+}
+
+p, blockquote {
+    font-weight: 400;
+    font-size: clamp(0.4em, 0.4em + 2vw, 1em);
+}
+
+strong, b {
+    font-weight: 500;
+    font-size: clamp(0.4em, 0.4em + 2vw, 1em);
+}
+
+.big {
+    font-weight: 500;
+    font-size: clamp(0.6em, 0.62em + 2vw, 1.25em);
+}
+
+
 
 /* Pré-header */
 #pre-header{
@@ -90,7 +115,7 @@ body{
     height: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -1px;
     background: var(--off-white);
     -webkit-clip-path: polygon(0 0, 0 10%, 100% 0);
     clip-path: polygon(0 0, 0 10%, 100% 0);
@@ -109,6 +134,21 @@ body{
     clip-path: polygon(100% 80%, -70px 100%, 100% 100%);
     z-index: 1;
 }
+
+
+/* Sobre */
+
+#Sobre {
+    padding: 70px 0;
+    background-color: var(--primary-red-700);
+}
+
+#Sobre .content{
+    max-width: 600px;
+    text-align: left;
+}
+
+
 
 /* Footer */
 footer {
