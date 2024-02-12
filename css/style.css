@@ -140,7 +140,7 @@ h1 {
     background: var(--off-white);
     -webkit-clip-path: polygon(0 0, 0 10%, 100% 0);
     clip-path: polygon(0 0, 0 10%, 100% 0);
-    z-index: 2;
+    z-index: 1;
 }
 
 #Home::after{
@@ -156,9 +156,37 @@ h1 {
     z-index: 1;
 }
 
+/* Serviços */
+#Servicos{
+    position: relative;
+}
+
+#Servicos::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background: var(--primary-red-700);
+    -webkit-clip-path: polygon(100% 80%, -70px 100%, 100% 100%);
+    clip-path: polygon(100% 90%, -70px 100%, 100% 100%);
+    z-index: -1;
+}
+
+.service-num{
+    font-size: 264px;
+    font-weight: 900;
+    color: var(--black);
+    text-shadow: -1px 0 #b3b3b3, 0 1px #b3b3b3, 1px 0 #b3b3b3, 0 -1px #b3b3b3;
+    line-height: 100%;
+    height: 165px;
+    overflow: hidden;
+    margin-bottom: -3px;
+    -webkit-transform: translateZ(0);
+}
 
 /* Sobre */
-
 #Sobre {
     padding: 70px 0;
     background-color: var(--primary-red-700);
@@ -168,8 +196,6 @@ h1 {
     max-width: 600px;
     text-align: left;
 }
-
-
 
 /* Footer */
 footer {
@@ -190,7 +216,7 @@ footer .content span{
 
 footer .content span::after{
     content: "";
-    width: 2px;
+    width: 3px;
     height: 55px;
     background-color: var(--primary-red-700);
     position: absolute;
@@ -200,7 +226,7 @@ footer .content span::after{
 
 footer .content span::before{
     content: "";
-    width: 2px;
+    width: 3px;
     height: 55px;
     background-color: var(--primary-red-700);
     position: absolute;
@@ -217,10 +243,11 @@ footer .content a{
 
 footer .content ul{
     display: flex;
-    gap: 15px;
+    gap: 30px;
     border-top: 3px solid var(--primary-red-700);
     list-style: none;
     padding: 0;
+    padding-top: 15px;
 }
 
 footer .content ul li a i{
