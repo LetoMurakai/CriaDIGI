@@ -158,9 +158,60 @@ body{
     background-color: var(--primary-red-700);
 }
 
-#Sobre .content{
+#Sobre .width-600{
     max-width: 600px;
     text-align: left;
+}
+
+/* Fundadores */
+#Fundadores{
+    padding: 70px 0;
+    position: relative;
+}
+
+#Fundadores::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background: var(--primary-900);
+    -webkit-clip-path: polygon(100% 80%, -70px 100%, 100% 100%);
+    clip-path: polygon(100% 20%, -70px 100%, 100% 100%);
+    z-index: 1;
+}
+
+/* Contato */
+#Contato {
+    padding-bottom: 5rem;
+    background-color: var(--primary-red-700);
+    position: relative;
+}
+
+#Contato::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background: var(--gray);
+    -webkit-clip-path: polygon(100% 80%, -70px 100%, 100% 100%);
+    clip-path: polygon(100% 90%, -70px 100%, 100% 100%);
+    z-index: 1;
+}
+#Contato::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background: var(--black);
+    -webkit-clip-path: polygon(100% 80%, -70px 100%, 100% 100%);
+    clip-path: polygon(0% 90%, -70px 100%, 100% 100%);
+    z-index: 2;
 }
 
 /* Footer */
