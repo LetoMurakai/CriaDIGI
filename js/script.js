@@ -28,3 +28,18 @@ function shuffleArray(array) {
     }
     return array;
 }
+
+// Funçao para grudar navbar no topo
+let viewHeight = 0;
+function getViewPosition(){
+    const nav = document.getElementById('navbar-sticky');
+    if(document.body.scrollTop > 643 || document.documentElement.scrollTop > 643){
+        nav.classList.add('afterscroll');
+    }else{
+        nav.classList.remove('afterscroll');
+    }
+}
+addEventListener('scroll', () => getViewPosition());
+
+// Parallax
+var rellax = new Rellax('.rellax');

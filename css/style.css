@@ -38,8 +38,24 @@ body{
 }
 
 */
-
-
+.sticky-top{
+    top: -120px;
+    transition-property: top;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    transition-function: ease-in-out;
+}
+.afterscroll { 
+    top: 0px;
+}
+.afterscroll .navbar{
+    padding-top:0.1rem;
+    padding-bottom:0.1rem;
+}
+.afterscroll .navbar-brand > img{
+    width: 180px;
+}
+    
 
 /* Pré-header */
 #pre-header{
@@ -115,7 +131,7 @@ body{
     height: 100%;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     background: var(--black);
     -webkit-clip-path: polygon(100% 80%, -70px 100%, 100% 100%);
     clip-path: polygon(100% 80%, -70px 100%, 100% 100%);
