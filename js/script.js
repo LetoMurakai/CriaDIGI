@@ -1,6 +1,16 @@
+// função para saber o dispositivo
+function deviceCode(){
+    const userAgent = navigator.userAgent;
+if (userAgent.includes("iPhone") || userAgent.includes("iPad") || userAgent.includes("iPod")) {
+  return charactersList = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '[', ']', '{', '}', '|', ';', ':', ',', '.', '/', '<', '>', '?']
+} else {
+    return charactersList = ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"]
+}
+}
+deviceCode();
 //baffle config
 const names = ['Digi','Promoções','Incentivo','Inovação','Apps','Games','Processamento','Soluções','Análise','Comunicação','Sites', 'Conexão', 'Softwares', 'Parceria', 'Futuro'];
-const charactersList = ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"]
+
 let nameIndex = 0;
 
 shuffleArray(names);
@@ -43,3 +53,22 @@ addEventListener('scroll', () => getViewPosition());
 
 // Parallax
 var rellax = new Rellax('.rellax');
+var rellax = new Rellax('.founder-rellax',{
+    breakpoints:[576, 768, 1201]
+});
+
+// Carousel
+new Splide( '.splide', {
+    rewind: true,
+    perPage    : 3,
+    gap        : 50,
+    autoplay   : true,
+    interval   : 2000,
+    breakpoints: {
+        976: {
+            perPage: 2,
+        },
+        768: {
+          perPage: 1,
+        }
+  }} ).mount();
