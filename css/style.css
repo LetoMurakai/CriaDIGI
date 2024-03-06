@@ -170,11 +170,16 @@ body {
     font-size: 264px;
     font-weight: 900;
     color: var(--bs-black);
-    text-shadow: -1px 0 #b3b3b3, 0 1px #b3b3b3, 1px 0 #b3b3b3, 0 -1px #b3b3b3;
     line-height: 100%;
     height: 165px;
     overflow: hidden;
     margin-bottom: -3px;
+    text-shadow:
+        3px 3px 0 #fff,
+        -1px -1px 0 #fff,  
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
 }
 
 .service-num:nth-child(1) {
@@ -253,6 +258,43 @@ body {
     padding: 70px 0;
     z-index: 2;
     position: relative;
+}
+
+/* Valores */
+#Valores{
+    padding: 70px 0;
+    background-color: var(--bs-white);
+    color: var(--bs-primary-700);
+    position: relative;
+}
+
+#Valores .valores-cards{
+    color: var(--bs-black);
+}
+
+#Valores .valores-cards .card{
+    position: relative;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+
+#Valores .valores-cards .card::before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--bs-primary-500);
+    position: absolute;
+    bottom: -3px;
+    transition: .3s;
+    border-radius: 30px;
+}
+
+#Valores .valores-cards .card:hover img{
+    transform: scale(.9);
+}
+
+#Valores .valores-cards .card:hover::before{
+    width: 100%;
 }
 
 /* Cases */
