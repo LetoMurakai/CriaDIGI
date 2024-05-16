@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="./js/bootstrap/custom/bootstrap.css" />
   <link rel="stylesheet" href="./js/@splidejs/splide/dist/css/themes/splide-red.min.css" />
   <link rel="stylesheet" href="./js/aos/dist/aos.css" />
+  <link rel="stylesheet" href="./js/toastify/toastify.css" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -367,28 +368,28 @@
             </p>
           </div>
           <div class="col-12 col-lg-6 ms-auto">
-            <form action="submit" class="text-black">
+            <form class="text-black" id="ContactForm">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nameInput" placeholder="Nome completo" required />
+                <input type="text" class="form-control" name="nameInput" placeholder="Nome completo" required />
                 <label for="nameInput">Nome completo</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="emailInput" placeholder="exemplo@email.com" required />
+                <input type="email" class="form-control" name="emailInput" placeholder="exemplo@email.com" required />
                 <label for="emailInput">E-mail</label>
               </div>
-              <select class="form-select mb-3" aria-label="Tipo de serviço">
-                <option selected disabled>Tipos de serviços</option>
-                <option value="1">Incentivo e Promoção</option>
-                <option value="2">Landing Page e Site Institucional</option>
-                <option value="3">Sistemas Customizados</option>
-                <option value="4">Aplicativos Móveis</option>
+              <select class="form-select mb-3" aria-label="Tipo de serviço" name="tipoServicoInput">
+                <option selected disabled>Selecione um serviço</option>
+                <option value="Incentivo e Promoção">Incentivo e Promoção</option>
+                <option value="Landing Page e Site Institucional">Landing Page e Site Institucional</option>
+                <option value="Sistemas Customizados">Sistemas Customizados</option>
+                <option value="Aplicativos Móveis">Aplicativos Móveis</option>
               </select>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="assuntoInput" placeholder="O que deseja ?" required />
+                <input type="text" class="form-control" name="assuntoInput" placeholder="O que deseja ?" required />
                 <label for="assuntoInput">Assunto</label>
               </div>
               <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Escreva sau mensagem aqui..." id="mensagemInput"
+                <textarea class="form-control" placeholder="Escreva sau mensagem aqui..." name="mensagemInput"
                   style="height: 100px" required></textarea>
                 <label for="mensagemInput">Mensagem</label>
               </div>
@@ -447,6 +448,8 @@
 <script src="./js/rellax/rellax.min.js"></script>
 <script src="./js/@splidejs/splide/dist/js/splide.min.js"></script>
 <script src="./js/aos/dist/aos.js"></script>
+<script src="./js/toastify/toastify.js"></script>
+<script src="./js/contact.js"></script>
 <script src="./js/script.js"></script>
 
 </html>
